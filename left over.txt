@@ -1,0 +1,236 @@
+--DONE :production.brands,production.categories,sales.customers,sales.stores,production.stocks,sales.staffs
+-- TO COMPLETE: production.products,
+		sales.orders,
+		sales.order_items
+
+
+INSERT INTO production.brands(brand_id,brand_name) VALUES(1,' TVS'),
+(2,'Hero'),
+(3,'Honda'),
+(4,'Royal Enfield'),
+(5,'Yamaha'),
+(6,'Suzuki'),
+(7,'Bajaj'),
+(8,'Kawasaki'),
+(9,'KTM');
+ 
+
+INSERT INTO production.categories(category_id,category_name) VALUES(1,'Street bikes');
+INSERT INTO production.categories(category_id,category_name) VALUES(2,'Cruisers') ;
+INSERT INTO production.categories(category_id,category_name) VALUES(3,'Sport bikes'); 
+INSERT INTO production.categories(category_id,category_name) VALUES(4,'Electric Bikes'); 
+INSERT INTO production.categories(category_id,category_name) VALUES(5,'scooter') ;
+INSERT INTO production.categories(category_id,category_name) VALUES(6,'Touring') ;
+
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(1,'Royal Enfeild Classic 350',4,1,2019,150000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(2,'Royal Enfeild Himalayan',4,6,2018,200000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(3,'Royal Enfeild Meteor',4,2,2020,130000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(4,'Royal Enfeild Bullet',4,1,2005,210000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(5,'Honda Dio',3,5,2013,99000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(6,'Honda Hness',3,1,2020,150000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(7,'Honda CBR 650R',3,3,2015,770000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(8,'Honda Activa ',3,5,2015,88000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(9,'KTM RC200',9,3,2021,212000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(10,'KTM Duke 125',9,3,2021,125000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(11,'KTM Adventure',9,6,2018,250000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(12,'Bajaj Pulsar 180',7,1,2021,100000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(13,'Bajaj Pulsar RS 200',7,3,2020,170000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(14,'Bajaj Avenger',7,2,2021,125000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(15,' TVS Apapche RTR 200',1,3,2017,130000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(16,' TVS Apache 160',1,1,2013,100000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(17,'Kawasaki Endavour',8,4,2015,700000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(18,'Kawasaki Ninja',8,3,2018,850000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(19,'Kawasaki Z800',8,3,2017,350000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(20,'Bajaj Chethak Electric',7,4,2021,96000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(21,' TVS Scooty Pep+ - 2021',1,5,2021,70000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(22,'Yamaha FZ',5,1,2021,120000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(23,'Yamaha Fascino',5,5,2021,95000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(24,' Yamaha RX200',5,3,2021,180000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(25,'Suzuki Gixxer',6,1,2013,97000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(26,'Suzuki Burgman',6,4,2021,120000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(27,'Suzuki Access',6,5,2017,99000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(28,'Hero Splendor',2,1,2017,60000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(29,'Hero Xpulse 200',2,6,2017,145000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(30,'Hero Glamour',2,1,2014,87000);
+INSERT INTO production.products(product_id, product_name, brand_id, category_id, model_year, list_price) VALUES(31,'Hero Super Splendor',2,1,2017,85000);
+
+
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(1,'Lucifer','Morningstar',NULL,'lucifermorningstar@yahoo.com','123 rosemary ','Bangalore','Karnataka',560043);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(2,'Saha','Sharma',NULL,'saha.sharma@yahoo.com','910 Kadal ','Pallakad','Kerala',682008);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(3,'Guru','Nayak',NULL,'guru.nayak@aol.com','33 Honey Creek Layout ','Kollam','Kerala',680278);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(4,'Mary','Kom',9854321567,'marykom@aol.com','128 Pearl Lane ','Bangalore','Karnataka',560056);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(5,'Damon','Salvatore','9808160030','damonsalvatore@msn.com','107 Mangad ','Ernakulam','Kerala',680820);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(6,'Lynda','Kein',NULL,'lynda.kein@hotmail.com','769 kamalhalli ','Tumkur','Karnataka',570050);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(7,'Stefan','Salvatore','7169863359','Stefansalvatore@hotmail.com','345 contol Station Rd. ','Bangalore','Karnataka',560008);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(8,'Derek','Hale',9834508765,'derekhale@yahoo.com','199 Brown layout ','Mangalore','Karnataka',581372);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(9,'Kevin','Jose',NULL,'kevinjose@msn.com','855 Banshankari ','Bangalore','Karnataka',560050);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(10,'Ryan','Newman',NULL,'ryan.newman@gmail.com','475 btm layout ','Bangalore','Karnataka',560950);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(11,'Will','Mellow',NULL,'will.mellow@yahoo.com','879 Indra nagar','Shimoga','Karnataka',580952);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(12,'Lary','Syke','9165837761','obby.syke@hotmail.com','33 Rock Maple Ground ','Bangalore','Karnataka',560043);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(13,'Elena','Gilbert',NULL,'elena.gilbert@msn.com','28 MG Road ','Mapusa','Goa',403111);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(14,'Allysn','Hunter',NULL,'allysnhunter@hotmail.com','785 Rockview road ','Panaji','Goa',403110);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(15,'Alaric','Saltzman',NULL,'alaric.saltzman@gmail.com','314 South End Circle ','Bangalore','Karnataka',560901);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(16,'Emmy','Sancez','9809458823','emmy.sancez@hotmail.com','46 MG Road ','Bangalore','Karnataka',560002);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(17,'Amy','Santiago',NULL,'amy.santiago@msn.com','91 Kolhalli','Mandya','Karnataka',570583);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(18,'Jake','Peralta',NULL,'jake.peralta@aol.com','4 Yelhanka ','Bangalore','Karnataka',560024);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(19,'Raymond','Holt',9451238678,'raymond.holt@yahoo.com','19 Nandi Hill Road ','Bangalore','Karnataka',560127);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(20,'Rosa','Diaz',NULL,'rosa.diaz@aol.com','93/4 Hogwartz St. ','Margao','Goa',403100);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(21,'Charles','Boyle',NULL,'charles.boyle@gmail.com','10 Silver Spear Street ','Panaji','Goa',403002);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(22,'Nagraj','Pole',NULL,'mr.nags@gmail.com','68 West Kirk Road ','Bangalore','Karnataka',560731);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(23,'Kaylee','Marga',8897645320,'kaylee.margah@msn.com','876 Fulton Layout ','Kochi','Kerala',560423);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(24,'Corona','Will',NULL,'corona.will@msn.com','961 Ocean Road ','Ernakulam','Kerala',681301);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(25,'Regina','Vatice',NULL,'regina.vatice@gmail.com','44 St.brook Street ','Mapsua','Goa',403111);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(26,'Banshee','Reese','978152907','banshee.reese@gmail.com','80 Wild Horse Street ','Margao','Goa',403100);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(27,'Santa','Valcarie',NULL,'santa.valcarie@yahoo.com','747 penter Street ','Panaji','Goa',403110);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(28,'Jack','Frost',9990003339,'jack.frost@hotmail.com','76 Demon Lane ','Kochin','Kerala',681562);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(29,'Frog','Fredrick',NULL,'frog.fredrick@msn.com','193 Spruce Road ','Panaji','Ga',560541);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(30,'Albert','Einstein',NULL,'albert@gmail.com','853 St.brook Street ','Ernakulam','Kerala',680505);
+INSERT INTO sales.customers(customer_id,first_name, last_name, phone, email, street, city, state, zip_code) VALUES(31,'Willie','Smoke','9302468375','willie.smoke@msn.com','69 Cypress layout ','Kochin','Kerala',680603);
+
+INSERT INTO sales.stores(store_id,store_name, phone, email, street, city, state, zip_code)
+VALUES(2,'Kerala Bikes','9994764321','kerala@bikes.shop','370 Demon Lane', 'Kochin','Kerala',681003),
+      (1,'Bangalore Bikes','9093798888','bangalore@bikes.shop','420 Yelhanka', 'Bengalore','Karnataka',560008),
+      (3,'Goa Bikes','9725305555','goa@bikes.shop','800 Rockview Road', 'Panaji','Goa',403110);
+
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(1,'Alpha','Jackon','alpha.jackson@bikes.shop','9315555554',1,1,NULL);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(2,'Beta','Cap','beta.cap@bikes.shop','8831555555',1,1,1);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(3,'Charlie','Princes','charlie.prince@bikes.shop','8315555556',1,1,2);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(4,'Delta','Wigg','delta.wigg@bikes.shop','8315555557',1,1,2);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(5,'Echo','Dive','echo.dive@bikes.shop','8516794444',1,2,1);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(6,'Foz','Boy','foz.boy@bikes.shop','5163790445',1,2,5);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(7,'Gamma','Daniel','gamma.daniel@bikes.shop','9167944946',1,2,5);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(8,'Hareley','Vargas','Hereley.vargas@bikes.shop','9725305555',1,3,1);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(9,'Inda','Trebl','Inda.trebl@bikes.shop','9725305556',1,3,2);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(10,'Jacob','Houston','Jacob.houston@bikes.shop','9723059557',1,2,3);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(11,'Kohli','loki','kohli.loki@bikes.shop','971230557',1,2,6);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(12,'Liam','Payne','liampayne@bikes.shop','9729934757',1,3,4);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(13,'Manga','Ragnarok','manga.ragnarok@bikes.shop','9723059543',1,3,3);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(14,'Naice','Neet','naice.neet@bikes.shop','9123079548',1,3,NULL);
+INSERT INTO sales.staffs(staff_id, first_name, last_name, email, phone, active, store_id, manager_id) VALUES(15,'Ostri','Op','Ostri.op@bikes.shop','9967541266',1,1,2);
+
+
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,1,3);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,5,5);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,9,6);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,12,10);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,15,10);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,17,20);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,22,0);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,25,14);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,28,16);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,2,8);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,6,26);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,10,13);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,3,26);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,7,24);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,11,29);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,4,12);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,8,0);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,31,25);
+
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,12,22);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,15,0);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,17,8);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,13,8);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,16,3);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,18,44);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,14,44);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,20,10);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,19,11);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,22,20);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,25,14);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(2,28,20);
+
+ 
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,22,0);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,25,14);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,28,15);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,23,2);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,26,16);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,29,4);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,24,16);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,27,31);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,30,20);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,12,25);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,15,10);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(3,17,0);
+
+
+
+
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(1,1,4,'20210101','20210105','20210103',1,1);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(2,4,4,'20210101','20210105','20210103',1,2);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(3,7,1,'20210102','20210105',NULL,1,3);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(4,6,4,'20210103','20210107','20210105',1,4);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(5,8,1,'20210131','20210204',NULL,1,15);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(6,9,2,'20201215','20201218','20201218',1,1);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(7,10,4,'20201224','20201227','20201225',1,2);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(8,11,4,'20210104','20210108','20210105',1,3);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(9,12,4,'20201225','20201228','20201226',1,4);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(10,2,4,'20201231','20210106','20210102',2,5);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(11,3,2,'20201218','20201221','20201220',2,6);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(12,5,4,'20201206','20201208','20201209',2,7);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(13,24,4,'20201208','20201211','20201211',2,10);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(14,28,4,'20210109','20210113','20210111',2,11);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(15,29,4,'20201209','20201210','20201212',2,5);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(16,31,4,'20210112','20210115','20210113',2,6);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(17,23,4,'20201212','20201214','20201214',2,11);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(18,13,1,'20210130','20210206',NULL,3,8);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(19,14,4,'20201214','20201217','2021226',3,9);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(20,21,4,'20210114','20210119','20210117',3,12);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(21,20,4,'20201215','20201216','20201228',3,13);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(22,25,4,'20210116','20210118','20210116',3,14);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(23,26,4,'20201216','20201219','20201217',3,9);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(24,29,1,'20210129','20210201',NULL,3,8);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(25,27,4,'20201218','20201221','20201219',3,12);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(26,15,3,'20210118',NULL,NULL,2,5);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(27,16,3,'20210115',NULL,NULL,2,7);
+INSERT INTO sales.orders(order_id, customer_id, order_status, order_date, required_date, shipped_date, store_id,staff_id) VALUES(28,17,3,'20210102',NULL,NULL,3,12);
+
+
+
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(1,1,5,1,99000,0.2);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(1,2,9,2,212000,0.2);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(1,3,10,1,125000,0.2);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(2,1,12,2,100000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(2,2,15,1,130000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(2,3,28,1,60000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(3,1,22,2,120000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(4,1,31,2,85000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(4,2,7,1,770000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(5,1,8,1,88000,0.2);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(6,1,3,1,130000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(7,1,6,2,150000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(8,1,11,1,250000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(9,1,4,1,210000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(9,2,15,1,130000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(9,3,1,1,150000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(9,4,3,1,130000,0.05);
+
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(10,1,12,2,100000,0.1);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(11,1,15,2,130000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(11,2,17,1,700000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(11,3,13,2,170000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(12,1,16,1,100000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(13,1,20,1,96000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(14,1,18,1,850000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(15,1,19,2,350000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(16,1,22,1,120000,0.1);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(17,1,25,2,97000,0.07);
+
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(18,1,22,1,120000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(19,1,25,2,97000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(20,1,28,1,60000,0.1);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(21,1,23,2,95000,0.1);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(22,1,26,1,120000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(22,2,29,1,145000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(22,3,24,1,180000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(22,4,27,1,99000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(22,5,30,1,87000,0.05);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(23,1,12,2,100000,0.07);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(24,1,17,2,700000,0.1);
+INSERT INTO sales.order_items(order_id, item_id, product_id, quantity, list_price,discount) VALUES(25,1,22,1,120000,0.1);
+
+
+
+
