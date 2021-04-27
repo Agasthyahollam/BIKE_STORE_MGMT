@@ -1,0 +1,48 @@
+--------------------1)---most sold model--------------------
+select p.product_name,sum(s.quantity) as total_quantity
+from production.products as p join sales.order_items as s
+on p.product_id = s.product_id
+group by p.product_name
+order by sum(s.quantity) DESC
+limit 1;
+
+----2)------all models of a brand in stock in any store--------------
+select distinct p.product_name
+from production.products as p 
+join production.stocks as s
+on p.product_id = s.product_id
+where p.brand_id = 1 
+AND s.quantity != 0;
+                ---to see all models of TVS---
+select p.product_name
+from production.products as p
+where p.brand_id = 1;
+
+
+---3)-------find all bikes in stock in goa store within range of 100000-200000-----
+select p.product_name,p.list_price,s.quantity
+from production.products as p join production.stocks as s
+on p.product_id = s.product_id
+left outer join sales.stores as ss
+on s.store_id = ss.store_id 
+where ss.state = 'Goa'
+AND p.list_price < 200000
+AND p.list_price > 100000
+AND s.quantity !=0
+order by p.list_price;
+
+
+--4)----update bike_prices with diwali discount------------------
+------above 200000,10% off the list price--------
+---------below or equal to 200000,5% off the list price-------
+select p.product_name,p.list_price
+from production.products as p;
+
+update production.products
+set list_price =
+case when (list_price <= 200000) then .95 * list_price
+when (list_price > 200000) then .90 * list_price
+end;
+
+
+
