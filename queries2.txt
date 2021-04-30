@@ -44,5 +44,12 @@ case when (list_price <= 200000) then .95 * list_price
 when (list_price > 200000) then .90 * list_price
 end;
 
+-----------------stock based on bike name and store id---------------------------------------
+
+SELECT production.stocks.quantity,production.stocks.product_id
+from production.stocks
+WHERE production.stocks.product_id = (select production.products.product_id 
+from production.products
+WHERE production.products.product_name = 'Royal Enfeild Classic 350') and production.stocks.store_id = 1 ;
 
 
